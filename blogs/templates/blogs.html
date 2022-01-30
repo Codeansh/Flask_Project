@@ -1,0 +1,15 @@
+{%extends "comm.html"%}
+ {%block content%}
+ {% for lst in blogs %}
+<article class="media content-section">
+  <div class="media-body">
+    <div class="article-metadata">
+      <a class="mr-2" href="#">{{ lst.auth }}</a>
+      <small class="text-muted">{{ lst.date }}</small>
+    </div>
+    <h2><a class="article-title" href="#">{{ lst.tittle }}</a></h2>
+    <p class="article-content">{{ lst.con }}</p>
+  </div>
+</article>
+{% endfor %}
+{%endblock content%}
